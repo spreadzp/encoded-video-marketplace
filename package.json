@@ -1,0 +1,26 @@
+{
+  "name": "live-keeper-encoded-nft-marketplace",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": { 
+    "eth-migrate": "truffle migrate --network development",
+    "test": "truffle exec scripts/run.js",
+    "compile:evm": "truffle compile", 
+    "migrate:evm-d": "rm -rf client/contracts/ethereum-contracts && truffle migrate --skip-dry-run --config truffle-config.js --network development --reset",
+    "test:evm": "truffle test", 
+    "exec:evm": "truffle exec",
+    "exec:ovm": "truffle exec $script --config truffle-config.ovm.js --network $npm_config_network",
+    "gan": "ganache -m 'furnace skill box crucial filter find imitate client usual nurse define elbow'"
+  },
+  "keywords": [],
+  "author": "Paul K ",
+  "license": "MIT",
+  "devDependencies": { 
+    "@truffle/hdwallet-provider": "^1.6.0",
+    "dotenv": "^8.2.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.0",
+    "hardhat": "^2.12.2"
+  }
+}
