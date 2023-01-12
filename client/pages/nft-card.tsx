@@ -144,7 +144,7 @@ function NftCard({ nftItem, index, userAddress }: NftCardProps) {
   return (<>
     <div key={index} className="border shadow rounded-xl overflow-hidden">
       {isLoadedContent ? <Loader /> : nft?.playbackId && !['0x'].includes(nft?.playbackId) && nft?.playbackId.length < 18 ?
-       <div className='m-4 pl-1'>{getTemplateByTypeFile(nft?.image ?? "", handledDescription[0], nft.playbackId)}</div> :
+       <div className='m-4 pl-1'>{getTemplateByTypeFile(nft?.image ?? "", handledDescription[0], nft.playbackId, nft.name)}</div> :
         <div className="pt-2 m-auto w-20 h-20">{getTemplateByTypeFile(base64Img, 'image')}</div>
       }
       <div className="p-4">

@@ -36,13 +36,13 @@ function PosterImage({ imageUrl }: PosterImageProps) {
     </>
   );
 };
-export const getTemplateByTypeFile = (imageUrl: string, typeFile: string, pbId?: string) => {
+export const getTemplateByTypeFile = (imageUrl: string, typeFile: string, pbId?: string, titleVideo?: string) => {
 
   switch (typeFile) {
     case 'image': return (<img className="rounded " width="350" src={imageUrl} />)
     case 'video': return (
       <Player
-        title="Agent 327: Operation Barbershop"
+        title={titleVideo}
         playbackId={pbId} 
         poster={<PosterImage imageUrl={imageUrl} />}
         showPipButton

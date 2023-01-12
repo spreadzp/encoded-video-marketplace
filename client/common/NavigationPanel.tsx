@@ -21,9 +21,11 @@ const NavigationPanel = ({ onConnect }: NavigationPanelProps): JSX.Element => {
       {walletAddress && client !== null ? (
         <ConversationsPanel />
       ) : (
+        <div className="conn-wallet text-white">
         <NoWalletConnectedMessage>
           <ConnectButton onConnect={onConnect} />
         </NoWalletConnectedMessage>
+        </div>
       )}
     </div>
   )

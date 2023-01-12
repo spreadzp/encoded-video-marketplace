@@ -26,7 +26,7 @@ export async function getWeb3Instance(): Promise<Web3InstanceProps> {
         return { currentAddress: currentAddress, marketPlaceContract: marketPlaceContract, encNftContract: encodedNftContract, web3Instance: web3 }
     } catch(err) {
         console.log('err', err)
-        alert(`Need to use Metamask wallet with  Goerly network` )
+        alert(`Need to use Metamask wallet with  Mumbai network` )
         return {} as Web3InstanceProps
     }
 }

@@ -21,8 +21,8 @@
 // create a file at the root of your project and name it .env -- there you can set process variables
 // like the mnemomic below. Note: .env is ignored by git in this project to keep your private information safe
 require('dotenv').config();
-const goerliMnemonic = process.env["GOERLI_MNEMONIC"];
-const infuraKey = process.env["INFURA_KEY"];
+const walletMnemonic = process.env["WALLET_MNEMONIC"]; 
+const infuraKey = process.env["INFURA_KEY"]; 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 module.exports = {
@@ -68,13 +68,15 @@ module.exports = {
     // UNCOMMENT TO USE GOERLI NETWORK
     // Currently, VSCode Extension debugger fails with "truffle-config.js" has incorrect format
     // due to the usage of HDWalletProvider
-    // goerli: {
-    //   network_id: 5,
-    //   chain_id: 5,
-    //   provider: function() {
-    //     return new HDWalletProvider(goerliMnemonic, "https://goerli.infura.io/v3/" + infuraKey, 0, 1);
-    //   }
-    // },
+    mumbai: {     
+      provider: function() {
+        return new HDWalletProvider(walletMnemonic, `https://polygon-mumbai.infura.io/v3/"${infuraKey}` );
+      },
+      network_id: 80001, 
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
     dashboard: {
       host: "127.0.0.1",
       port: 24012,

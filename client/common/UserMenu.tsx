@@ -99,7 +99,7 @@ const UserMenu = ({ onConnect, onDisconnect }: UserMenuProps): JSX.Element => {
                 {walletAddress ? (
                   <>
                     <AvatarBlock walletAddress={walletAddress} />
-                    <div className="flex flex-col">
+                    <div className="flex flex-col text-white">
                       <div className="flex items-center">
                         <div className="bg-g-100 rounded h-2 w-2 mr-1"></div>
                         <p className="text-sm font-bold text-g-100">
@@ -108,7 +108,7 @@ const UserMenu = ({ onConnect, onDisconnect }: UserMenuProps): JSX.Element => {
                       </div>
                       <Address
                         address={walletAddress}
-                        className="text-md leading-4 font-semibold text-white ml-3"
+                        className="text-md leading-4 font-semibold  ml-3"
                       />
                     </div>
                   </>

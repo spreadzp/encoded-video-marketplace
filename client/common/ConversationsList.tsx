@@ -153,12 +153,15 @@ const ConversationsList = (): JSX.Element => {
 
 const NoConversationsMessage = (): JSX.Element => {
   return (
-    <div className="flex flex-col flex-grow justify-center h-[100%]">
-      <div className="flex flex-col items-center px-4 text-center">
+    <div className="flex flex-col flex-grow justify-center h-[100%] text-white">
+      <div className="flex flex-col items-center px-4 text-center h-8 w-8">
+        <div className="no-conv">
         <ChatBubbleBottomCenterTextIcon
-          className="h-8 w-8 mb-1 stroke-n-200 md:stroke-n-300"
+          className="h-4 w-4 mb-1 stroke-n-20 md:stroke-n-30"
           aria-hidden="true"
         />
+        </div>
+        
         <p className="text-xl md:text-lg text-n-200 md:text-n-300 font-bold">
           Your message list is empty
         </p>

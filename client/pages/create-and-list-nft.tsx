@@ -198,7 +198,7 @@ export default function CreateItem() {
 
 
   return (
-    <div className="flex items-start justify-center main-h brand-bg  ">
+    <div className="flex items-start justify-center main-h brand-bg mint-nft">
       <div className="flex flex-col  create-form border-rose-500 p-5 w-100">
         <label htmlFor="name-nft" className='text-xl font-bold text-white' >NAME </label>
         <input
@@ -231,21 +231,17 @@ export default function CreateItem() {
               id="file_input" name="file" onChange={onChange} type="file" />
           </div>}
         {
-          base64FileData && <div>
+          base64FileData && <div className="poster">
             <div className="block mb-2 text-sm font-medium text-white dark:text-white">Poster Image</div>
             {getTemplateByTypeFile(base64FileData, typeFile)}
           </div>
 
         }
-        {base64FileData && <div className='p-1'>
+        {base64FileData && <div className='p-1 '>
           <CreateAndViewAsset setPlaybackId={setPbId} />
         </div>}
 
-
-        {
-          base64FileData && playbackId &&
-          getTemplateByTypeFile(base64FileData, typeFile, playbackId)
-        }
+ 
         {isUploadToIpfs && enableMint &&
           <Loader />
 

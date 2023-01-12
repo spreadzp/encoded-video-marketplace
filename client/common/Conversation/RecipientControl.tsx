@@ -18,7 +18,7 @@ const RecipientControl = (): JSX.Element => {
   const { resolveName, lookupAddress } = useWalletProvider()
   const client = useAppStore((state) => state.client)
   const router = useRouter()
-  const recipientWalletAddress = useAppStore((state) => state.addressRecipient)
+  const recipientWalletAddress = useAppStore((state) => state.addressRecipient) 
   // const recipientWalletAddress = getAddressFromPath(router)
   const [recipientInputMode, setRecipientInputMode] = useState(
     RecipientInputMode.InvalidEntry
@@ -108,7 +108,7 @@ const RecipientControl = (): JSX.Element => {
       <div className="md:hidden flex items-center ml-3">
         <BackArrow onClick={handleBackArrowClick} />
       </div>
-      <div className="flex-1 flex-col shrink justify-center flex bg-zinc-50 md:border-b md:border-gray-200 md:px-4 md:pb-[2px]">
+      <div className="flex-1 flex-col shrink justify-center flex bg-zinc-50 md:border-b md:border-gray-200 md:px-4 md:pb-[2px] text-white">
         <form
           className="w-full flex pl-2 md:pl-0 h-8 pt-1"
           action="#"

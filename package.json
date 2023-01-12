@@ -7,6 +7,7 @@
     "test": "truffle exec scripts/run.js",
     "compile:evm": "truffle compile", 
     "migrate:evm-d": "rm -rf client/contracts/ethereum-contracts && truffle migrate --skip-dry-run --config truffle-config.js --network development --reset",
+    "deploy-to-mumbai": "rm -rf client/contracts/ethereum-contracts && truffle migrate --config truffle-config.js --network mumbai --reset",
     "test:evm": "truffle test", 
     "exec:evm": "truffle exec",
     "exec:ovm": "truffle exec $script --config truffle-config.ovm.js --network $npm_config_network",

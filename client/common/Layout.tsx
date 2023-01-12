@@ -41,7 +41,7 @@ const Layout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
       </Head>
       <div>
         <NavigationView>
-          <aside className="flex w-full md:w-84 flex-col flex-grow fixed inset-y-0">
+          <aside className="flex md:w-84 flex-col flex-grow fixed inset-y-0">
             <div className="flex flex-col flex-grow md:border-r md:border-gray-200 bg-white overflow-y-auto">
               <div className="max-h-16 min-h-[4rem] bg-p-600 flex items-center justify-between flex-shrink-0 px-4">
                 {/* <Link href="/chat" passHref={true}>
@@ -60,7 +60,7 @@ const Layout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
         <ConversationView>
           {walletAddress && client ? (
             <>
-              <div className="flex bg-zinc-50 border-b border-gray-200 md:bg-white md:border-0 max-h-16 min-h-[4rem]">
+              <div className=" flex bg-zinc-50 border-b border-gray-200 md:bg-white md:border-0 max-h-16 min-h-[4rem]">
                 <RecipientControl />
               </div>
               {children}
@@ -70,7 +70,7 @@ const Layout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
           )}
         </ConversationView>
       </div>
-      
+
     </>
   )
 }
